@@ -56,7 +56,7 @@ const Index = () => {
             <p className="desc mb-3">
             Through our award-winning blog, we love to provide travelers with guidance and inspiration and connect them to meaningful experiences as they travel the world with curiosity!
             </p>
-            <Link href="/blog" className="base-btn">
+            <Link href="/about" className="base-btn">
             Learn about us
             </Link>
           </div>

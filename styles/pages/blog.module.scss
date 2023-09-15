@@ -1,0 +1,49 @@
+@import "../abstracts/";
+
+.blog :global {
+  padding: 42px 0px;
+  @extend %container;
+  margin-bottom: 50px;
+  position: relative;
+  .blog-heading {
+    @extend %main-heading;
+    font-size: 32px;
+  }
+  .blog-guide-box {
+    @include flexBox(space-between, center);
+    position: relative;
+    background-color: #f7faf5;
+    img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+    }
+    .blog-details {
+      height: 100%;
+      padding: 20px;
+      max-width: 300px;
+      .label{
+        font-size: 16px;
+        font-weight: 500;
+        color: $base-color;
+        line-height: 2;
+      }
+      .date{
+        color: rgb(113, 128, 150);
+        font-weight: 500;
+        font-size: 12px;
+      }
+      .blog-heading {
+        @extend %main-heading;
+        font-size: 22px;
+        line-height: 1.2;
+      }
+      .blog-desc{
+        color: rgb(113, 128, 150);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+    }
+  }
+}

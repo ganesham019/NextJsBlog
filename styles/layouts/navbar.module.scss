@@ -1,0 +1,50 @@
+@import "../abstracts";
+
+.nav :global {
+  padding: 20px;
+  @include flexBox(space-between, center);
+  @extend %container;
+  .nav-log-section {
+    @include flexBox(flex-start, center);
+    .nav-logo {
+      line-height: 0;
+      display: inline-block;
+    }
+    .nav-heading {
+      @extend %heading-medium;
+      margin-left: 20px;
+    }
+  }
+
+  .nav-wrap {
+    position: relative;
+    @include flexBox(flex-start, center);
+    .nav-item {
+      position: relative;
+      a {
+        color: $gray-1000;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        &:hover {
+          color: $base-color;
+          &::before {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            top: 20px;
+            background-color: $base-color;
+            transition: all 0.9s ease-in-out;
+            transform-origin: center center;
+          }
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+  }
+}

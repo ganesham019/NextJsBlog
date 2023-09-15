@@ -1,0 +1,29 @@
+@import "../abstracts";
+
+.footer :global {
+  background-color: #f7faf5;
+  padding: 22px;
+  .footer-wrap{
+    @extend %container;
+    @include flexBox(space-between, center);
+    .footer-copyrights {
+        font-size: 10px;
+        color: $gray-1000;
+      }
+      .social_icons {
+        @include flexBox(space-between, center);
+        li{
+           a{
+            font-size: 20px;
+            &:hover{
+                color: $gray-1000;
+            }
+           }
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+        }
+      }
+  }
+ 
+}

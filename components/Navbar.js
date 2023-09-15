@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import navStyle from "../styles/Layouts/navbar.module.scss";
-const Nav = () => {
+import navbarLayoutStyle from "../styles/layouts/navbar.module.scss"
+
+const Navbar = () => {
   return (
     <header>
-      <nav className={navStyle.nav}>
+      <nav className={navbarLayoutStyle.nav}>
         <div className="nav-log-section">
           <Link href="/" className="nav-logo">
             <Image
@@ -34,4 +35,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Navbar;
